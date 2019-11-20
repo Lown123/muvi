@@ -1,5 +1,6 @@
 buildscript {
     apply from: 'dependencies.gradle'
+    apply from: 'modules-dependecy-graph.gradle'
     repositories {
         google()
         maven { url 'https://dl.bintray.com/kotlin/kotlin-eap' }
