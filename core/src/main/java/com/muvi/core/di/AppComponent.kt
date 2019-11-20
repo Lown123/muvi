@@ -3,8 +3,8 @@ package com.muvi.core.di
 import android.app.Application
 import android.content.Context
 import com.muvi.core.BuildConfig
+import com.muvi.remote.ApiConfig
 import com.muvi.remote.LetterboxdApi
-import com.muvi.remote.di.HttpDebuggable
 import com.muvi.remote.di.LetterboxdApiModule
 import dagger.Binds
 import dagger.BindsInstance
@@ -48,8 +48,7 @@ internal abstract class AppModule {
 
         @Provides
         @JvmStatic
-        @HttpDebuggable
-        fun debuggable() = BuildConfig.DEBUG
+        fun config() = buildConfig()
     }
 }
 
@@ -59,6 +58,14 @@ internal abstract class AppModule {
 val appModule = module(override = true) {
 
     single {
-        BuildConfig.DEBUG
+        buildConfig()
     }
+}
+
+private fun buildConfig(): ApiConfig {
+    return ApiConfig(
+        key = BuildConfig.API_KEY,
+        secret = BuildConfig.API_SECRET,
+        debuggable = BuildConfig.DEBUG
+    )
 }
