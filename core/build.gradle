@@ -5,6 +5,9 @@ apply plugin: 'kotlin-kapt'
 
 dependencies {
     api project(':letterboxd_api')
+    api project(':navigation')
+    api project(':design_library')
+
     implementation libraries.androidxFragment
     implementation libraries.dagger
     implementation libraries.koin

@@ -5,9 +5,7 @@ apply plugin: 'kotlin-kapt'
 
 dependencies {
     implementation project(':core')
-    implementation project(':design_library')
     implementation project(':feed_data')
-    implementation project(':navigation')
 
     implementation libraries.androidxAppCompat
     implementation libraries.androidxLifecycleExtensions

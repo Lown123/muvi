@@ -20,11 +20,9 @@ android {
 }
 
 dependencies {
-    api project(':design_library')
+    api project(':core')
 
-    implementation project(':core')
     implementation project(':feed')
-    implementation project(':navigation')
 
     implementation libraries.androidxAppCompat
     implementation libraries.androidxLifecycleViewmodelKtx

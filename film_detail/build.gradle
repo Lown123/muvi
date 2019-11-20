@@ -5,9 +5,7 @@ apply plugin: 'kotlin-kapt'
 
 dependencies {
     implementation project(':app')
-    implementation project(':core')
     implementation project(':film_detail_data')
-    implementation project(':navigation')
 
     implementation libraries.androidxAppCompat
     implementation libraries.androidxConstraintLayout
