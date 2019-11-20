@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import com.muvi.actor_detail_data.actorDetailDataModule
 import com.muvi.actor_detail_remote.actorDetailRemoteModule
-import com.muvi.core.di.letterboxdApiModule
+import com.muvi.remote.di.letterboxdApiModule
 import com.muvi.navigation.EventObserver
 import com.muvi.navigation.extractActorId
 import com.muvi.navigation.filmDetailIntent

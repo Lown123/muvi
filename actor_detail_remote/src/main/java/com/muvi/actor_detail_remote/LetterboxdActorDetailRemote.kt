@@ -1,6 +1,5 @@
 package com.muvi.actor_detail_remote
 
-import com.muvi.actor_detail_data.ActorDetailRemote
 import com.muvi.actor_detail_domain.ActorDetail
 import com.muvi.actor_detail_domain.CharacterInFilm
 import com.muvi.base_domain.FilmSummary
