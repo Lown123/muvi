@@ -2,11 +2,13 @@ package com.muvi.feed_data
 
 import com.muvi.base_domain.FilmSummary
 import com.muvi.feed_domain.FilmRepository
+import com.muvi.feed_remote.FeedRemote
+import com.muvi.feed_cache.FeedCache
 import javax.inject.Inject
 
 internal class CacheAndRemoteFilmRepository @Inject constructor(
-        private val feedRemote: FeedRemote,
-        private val feedCache: FeedCache
+    private val feedRemote: FeedRemote,
+    private val feedCache: FeedCache
 ) : FilmRepository {
 
     override suspend fun getFilms(): List<FilmSummary> {

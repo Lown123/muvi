@@ -1,6 +1,5 @@
-package com.muvi.core.di
+package com.muvi.remote.di
 
-import com.muvi.core.BuildConfig
 import com.muvi.remote.Clock
 import com.muvi.remote.LetterboxdApi
 import com.muvi.remote.LetterboxdApiFactory
@@ -22,11 +21,7 @@ object LetterboxdApiModule {
     @JvmStatic
     @Provides
     @Singleton
-    fun letterboxdApi() = createLetterboxdApi()
-
-    private fun clock(): Clock = object : Clock {
-        override fun currentTimeMillis(): Long = System.currentTimeMillis()
-    }
+    fun letterboxdApi(@HttpDebuggable debuggable: Boolean) = createLetterboxdApi(debuggable)
 }
 
 /**
@@ -35,16 +30,16 @@ object LetterboxdApiModule {
 val letterboxdApiModule = module(override = true) {
 
     factory {
-        createLetterboxdApi()
+        createLetterboxdApi(get())
     }
 }
 
-private fun createLetterboxdApi(): LetterboxdApi {
+private fun createLetterboxdApi(debuggable: Boolean): LetterboxdApi {
     val letterboxdApiFactory = LetterboxdApiFactory(
-            apiKey = BuildConfig.API_KEY,
-            apiSecret = BuildConfig.API_SECRET,
-            enableHttpLogging = BuildConfig.DEBUG,
-            clock = clock()
+        apiKey = BuildConfig.API_KEY,
+        apiSecret = BuildConfig.API_SECRET,
+        enableHttpLogging = debuggable,
+        clock = clock()
     )
     return letterboxdApiFactory.remoteLetterboxdApi()
 }

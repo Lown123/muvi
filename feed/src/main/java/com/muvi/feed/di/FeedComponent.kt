@@ -6,9 +6,7 @@ import com.muvi.core.di.FeatureScope
 import com.muvi.feed.FeedFragment
 import com.muvi.feed.FeedViewModel
 import com.muvi.feed.FeedViewModelFactory
-import com.muvi.feed_cache.di.FeedCacheModule
 import com.muvi.feed_data.di.FeedDataModule
-import com.muvi.feed_remote.di.FeedRemoteModule
 import dagger.BindsInstance
 import dagger.Component
 import dagger.Module
@@ -17,9 +15,7 @@ import dagger.Provides
 @Component(
         modules = [
             FeedModule::class,
-            FeedDataModule::class,
-            FeedCacheModule::class,
-            FeedRemoteModule::class
+            FeedDataModule::class
         ],
         dependencies = [AppComponent::class]
 )
@@ -35,6 +31,7 @@ internal interface FeedComponent {
         fun fragment(fragment: FeedFragment): Builder
 
         fun coreComponent(module: AppComponent): Builder
+
         fun build(): FeedComponent
     }
 }

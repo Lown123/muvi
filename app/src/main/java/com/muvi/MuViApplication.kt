@@ -4,6 +4,7 @@ import android.app.Application
 import com.muvi.core.di.AppComponent
 import com.muvi.core.di.AppComponentProvider
 import com.muvi.core.di.DaggerAppComponent
+import com.muvi.core.di.appModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 
@@ -18,6 +19,7 @@ class MuViApplication : Application(), AppComponentProvider {
 
         startKoin {
             androidContext(this@MuViApplication)
+            modules(appModule)
         }
 
         appComponent = DaggerAppComponent

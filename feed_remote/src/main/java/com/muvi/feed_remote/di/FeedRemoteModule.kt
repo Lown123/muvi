@@ -1,6 +1,6 @@
 package com.muvi.feed_remote.di
 
-import com.muvi.feed_data.FeedRemote
+import com.muvi.feed_remote.FeedRemote
 import com.muvi.feed_remote.LetterboxdFeedRemote
 import com.muvi.remote.LetterboxdApi
 import dagger.Module

@@ -1,7 +1,7 @@
 package com.muvi.feed_cache
 
 import androidx.room.*
-import com.muvi.base_data.DbFilmSummary
+import com.muvi.feed_cache.db.DbFilmSummary
 
 @Database(
         version = 1,

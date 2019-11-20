@@ -2,8 +2,7 @@ apply plugin: 'kotlin'
 apply plugin: 'kotlin-kapt'
 
 dependencies {
-    implementation project(':base_domain')
-    implementation project(':feed_data')
+    api project(':feed_domain')
     implementation project(':letterboxd_api')
 
     implementation libraries.dagger

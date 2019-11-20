@@ -3,11 +3,11 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
 
 dependencies {
-    implementation project(':base_data')
-    implementation project(':base_domain')
-    implementation project(':feed_data')
+    api project(':feed_domain')
 
+    implementation libraries.moshi
     implementation libraries.dagger
+    implementation libraries.roomCommon
     implementation libraries.roomKtx
     implementation libraries.roomRuntime
 

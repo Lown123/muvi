@@ -1,4 +1,4 @@
-package com.muvi.feed_data
+package com.muvi.feed_cache
 
 import com.muvi.base_domain.FilmSummary
 

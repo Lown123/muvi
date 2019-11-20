@@ -2,9 +2,9 @@ package com.muvi.feed_cache.di
 
 import android.content.Context
 import androidx.room.Room
+import com.muvi.feed_cache.FeedCache
 import com.muvi.feed_cache.FeedDatabase
 import com.muvi.feed_cache.RoomFeedCache
-import com.muvi.feed_data.FeedCache
 import dagger.Module
 import dagger.Provides
 

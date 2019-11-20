@@ -13,7 +13,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
-internal class FeedViewModel @Inject constructor(private val getFilms: GetFilmsUseCase) : ViewModel() {
+internal class FeedViewModel(private val getFilms: GetFilmsUseCase) : ViewModel() {
 
     private val _films = MutableLiveData<List<UiModel>>()
     val films: LiveData<List<UiModel>> = _films

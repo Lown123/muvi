@@ -2,7 +2,6 @@ package com.muvi.feed_remote
 
 import com.muvi.base_domain.FilmSummary
 import com.muvi.base_domain.Image
-import com.muvi.feed_data.FeedRemote
 import com.muvi.remote.LetterboxdApi
 import javax.inject.Inject
 

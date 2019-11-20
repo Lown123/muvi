@@ -8,6 +8,7 @@ package com.muvi.core.di
  * should implement [AppComponentProvider].
  */
 interface AppComponentProvider {
+
     /**
      * Returns the AppComponent / DI root.
      */

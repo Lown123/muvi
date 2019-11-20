@@ -1,11 +1,10 @@
 package com.muvi.feed_cache
 
-import com.muvi.base_data.DbFilmSummary
-import com.muvi.base_data.DbImage
-import com.muvi.base_data.DbImageSize
 import com.muvi.base_domain.FilmSummary
 import com.muvi.base_domain.Image
-import com.muvi.feed_data.FeedCache
+import com.muvi.feed_cache.db.DbFilmSummary
+import com.muvi.feed_cache.db.DbImage
+import com.muvi.feed_cache.db.DbImageSize
 
 internal class RoomFeedCache(
         private val feedDao: FeedDao

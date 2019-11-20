@@ -1,5 +1,4 @@
 include ':app'
-include ':base_data'
 include ':base_domain'
 include ':actor_detail'
 include ':actor_detail_data'

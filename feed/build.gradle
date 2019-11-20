@@ -4,14 +4,9 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
 dependencies {
-    compileOnly project(':letterboxd_api')
-
     implementation project(':core')
     implementation project(':design_library')
-    implementation project(':feed_cache')
     implementation project(':feed_data')
-    implementation project(':feed_domain')
-    implementation project(':feed_remote')
     implementation project(':navigation')
 
     implementation libraries.androidxAppCompat

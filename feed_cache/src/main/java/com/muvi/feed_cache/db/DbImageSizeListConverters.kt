@@ -1,4 +1,4 @@
-package com.muvi.base_data
+package com.muvi.feed_cache.db
 
 import androidx.room.TypeConverter
 import com.squareup.moshi.Moshi

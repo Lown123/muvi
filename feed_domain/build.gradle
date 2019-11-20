@@ -1,4 +1,5 @@
 apply plugin: 'kotlin'
+apply plugin: 'kotlin-kapt'
 
 dependencies {
     api project(':base_domain')
@@ -6,4 +7,6 @@ dependencies {
     implementation libraries.dagger
     implementation libraries.kotlinCoroutinesCore
     implementation libraries.kotlinStdLib
+
+    kapt libraries.daggerCompiler
 }
