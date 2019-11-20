@@ -1,4 +1,4 @@
-package com.muvi.film_detail_data
+package com.muvi.film_detail_remote
 
 import com.muvi.base_domain.Film
 

@@ -16,8 +16,7 @@ import dagger.Provides
 @Component(
         modules = [
             FilmDetailModule::class,
-            FilmDetailDataModule::class,
-            FilmDetailRemoteModule::class
+            FilmDetailDataModule::class
         ],
         dependencies = [AppComponent::class]
 )

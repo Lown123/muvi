@@ -4,7 +4,6 @@ import com.muvi.base_domain.Actor
 import com.muvi.base_domain.Character
 import com.muvi.base_domain.Film
 import com.muvi.base_domain.Image
-import com.muvi.film_detail_data.FilmDetailRemote
 import com.muvi.remote.FilmModel
 import com.muvi.remote.ImageModel
 import com.muvi.remote.LetterboxdApi
