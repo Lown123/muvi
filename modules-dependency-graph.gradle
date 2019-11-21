@@ -97,6 +97,7 @@ task projectDependencyGraph {
             dot << "  \"${project.path}\" [${traits.join(", ")}];\n"
         }
 
+        // Projects rank
         dot << '\n  {rank = same;'
         for (project in projects) {
             if (rootProjects.contains(project)) {
@@ -105,6 +106,7 @@ task projectDependencyGraph {
         }
         dot << '}\n'
 
+        // Dynamic features rank
         dot << '\n  {rank = same;'
         for (project in projects) {
             if (dynamicFeatureProjects.contains(project)) {
@@ -113,6 +115,7 @@ task projectDependencyGraph {
         }
         dot << '}\n'
 
+        // data stores modules rank
         dot << '\n  {rank = same;'
         for (project in projects) {
             if ((javaProjects.contains(project) || androidProjects.contains(project)) && (project.path.contains("remote") || project.path.contains("cache")) && !project.path.contains("base")) {
@@ -121,6 +124,7 @@ task projectDependencyGraph {
         }
         dot << '}\n'
 
+        // data modules rank
         dot << '\n  {rank = same;'
         for (project in projects) {
             if ((javaProjects.contains(project) || androidProjects.contains(project)) && project.path.contains("data") && !project.path.contains("base")) {
@@ -129,6 +133,7 @@ task projectDependencyGraph {
         }
         dot << '}\n'
 
+        // domain modules rank
         dot << '\n  {rank = same;'
         for (project in projects) {
             if (javaProjects.contains(project) && project.path.contains("domain") && !project.path.contains("base")) {
