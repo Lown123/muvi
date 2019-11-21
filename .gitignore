@@ -20,11 +20,6 @@ gen/
 
 # Gradle files
 .gradle/
-!build/
-build/*
-!build/reports/
-build/reports/*
-!build/reports/dependency-graph/
 build/
 
 # Local configuration file (sdk path, etc)
